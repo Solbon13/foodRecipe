@@ -37,6 +37,10 @@ function App() {
     getData();
   };
 
+  const onSelectClick = val => {
+    setQuery(val)
+  }
+
   return (
     <div className="App">
       <h1>Приложение для поиска рецептов</h1>
@@ -52,6 +56,10 @@ function App() {
         />
         <input type="submit" value="Поиск" />
       </form>
+      <div className="selectClick">
+        <button onClick={() => {onSelectClick('chicken')}}>Курица</button>
+        <button onClick={() => {onSelectClick('pizza')}}>Пицца</button>
+      </div>
       <div className="recipes">
         {recipes !== [] &&
           recipes.map(recipe => <Recipe key={uuidv4()} recipe={recipe} />)}

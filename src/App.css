@@ -157,3 +157,9 @@ h1 {
   color: #40b48e;
   font-size: 1.3rem;
 }
+
+.selectClick{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
